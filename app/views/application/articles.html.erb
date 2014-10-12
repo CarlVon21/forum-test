@@ -1,0 +1,17 @@
+<h1>Ruby Forum</h1>
+
+<h2>Articles</h2>
+
+<p>Article Summary</p>
+
+<%= link_to "Home", root_url %>
+
+<% @articles.each do |article| %>
+
+  <%= link_to "/articles/" + article[:permalink] do %>
+
+    <p><%= article[:title] %>, <%= article[:summary] %></p>
+
+  <% end %>
+
+<% end %>
